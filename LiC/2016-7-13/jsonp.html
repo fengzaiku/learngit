@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js/zepto.min.js"></script>
+<script>
+	$(function(){
+		$('input').click(function(){
+			$.ajax({
+				url:'https://tcc.taobao.com/cc/json/mobile_tel_segment.htm',
+				dataType:"jsonp",
+				jsonp:'cb',
+				data:{
+					tel:'13510561096'
+				},
+				success: function(res){
+					alert(res.catName);
+				}
+			})
+		})
+	});
+</script>
+</head>
+
+<body>
+	<input type="button" value="获取数据" />
+	<p>
+    	
+    </p>
+</body>
+</html>

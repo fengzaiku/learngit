@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js/zepto.min.js"></script>
+<script>
+	
+	$.fn.toRed=function(){
+		this.css('background','red');
+	};
+
+	$(function(){
+		$('input').click(function(){
+			$(this).toRed();
+		})
+	});
+</script>
+</head>
+
+<body>
+	<input type="button" value="获取数据" />
+	<p>
+    	
+    </p>
+</body>
+</html>
